@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Snake.tscn" type="PackedScene" id=1]
+[ext_resource path="res://HUD.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Main.gd" type="Script" id=3]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="StartPosition" type="Position2D" parent="."]
+
+[node name="Snake" parent="." instance=ExtResource( 1 )]
+position = Vector2( 333, 218 )
+
+[node name="HUD" parent="." instance=ExtResource( 2 )]
+
+[connection signal="endGame" from="Snake" to="." method="_on_Snake_endGame"]
+[connection signal="hit" from="Snake" to="." method="_on_Snake_hit"]
+[connection signal="start_game" from="HUD" to="." method="newGame"]
