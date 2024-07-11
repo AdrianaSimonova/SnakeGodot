@@ -4,7 +4,6 @@ var berry_scene = preload("res://Berry.tscn")
 var berry
 var score = 0
 
-
 func spawn_berry():
 	if berry:
 		berry.queue_free()

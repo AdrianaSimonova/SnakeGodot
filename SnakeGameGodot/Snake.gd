@@ -3,7 +3,7 @@ extends Node2D
 signal hit
 signal endGame
 
-export var speed = 100
+export var speed = 200
 var screen_size
 var segment_scene = preload("res://SnakeSegment.tscn")
 

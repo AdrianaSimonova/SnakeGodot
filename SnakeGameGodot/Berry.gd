@@ -8,8 +8,8 @@ func randomize_position():
 	var viewport_size = get_viewport().size
 	var rng = RandomNumberGenerator.new()
 	rng.seed = OS.get_unix_time()
-	position = Vector2(rng.randf_range(0, 300), rng.randf_range(0, 300))
-	#position = Vector2(rng.randf_range(0, int(viewport_size.x)), rng.randf_range(0, int(viewport_size.y)))
+	#position = Vector2(rng.randf_range(0, 500), rng.randf_range(0, 500))
+	position = Vector2(rng.randf_range(0, int(viewport_size.x-100)), rng.randf_range(0, int(viewport_size.y-100)))
 
 
 func _on_Berry_area_entered(area):
